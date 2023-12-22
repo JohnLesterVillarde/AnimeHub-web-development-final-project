@@ -1,0 +1,352 @@
+:root {
+    font-size: 62.5%;
+    font-family: 'poppins', Arial, Helvetica, sans-serif
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url(Poppins-Regular.ttf);
+
+    font-family: 'poppins-bold';
+    src: url(Poppins-Bold.ttf);
+}
+
+*{
+    overflow: hidden;
+    font-size: clamp(1.6rem, 3%, 2rem);
+}
+
+body {
+    margin: 0rem;
+    padding: 0rem;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow: auto;
+
+    background-color: #212121;
+    color: #fff;
+    border: 1px solid greenyellow;
+    font-size: clamp(1.6rem, 2vw, 1.8rem);
+
+    display: grid;
+    grid-template-columns: 7% 1fr;
+    grid-template-rows: 13% 1fr 1fr;
+    grid-template-areas:
+        "header header"
+        "nav main"
+        "nav main";
+}
+
+header {
+    grid-area: header;
+    border: 1px solid #fff;
+
+    display: flex;
+}
+
+nav {
+    border: 1px solid #fff;
+    grid-area: nav;
+
+}
+
+main {
+    border: 1px solid #ff0101;
+    grid-area: main;
+}
+
+
+
+/*header syle*/
+header .logo {
+    font-family: 'poppins-bold';
+    font-size: clamp(1.8rem, 3vw, 3.3rem);
+    font-weight: bold;
+    width: fit-content;
+    margin-left: 2rem;
+    justify-content: center;
+    align-self: center;
+
+    background: linear-gradient(to right, #3AAEF8, #9F62ED);
+    color: transparent;
+    -webkit-background-clip: text;
+
+}
+
+header form {
+    width: clamp(13rem, 38%, 50rem);
+    height: 3.5rem;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-self: center;
+    align-self: center;
+
+    display: flex;
+    justify-content:center;
+}
+
+header form input[type="search"] {
+    flex-grow: 1;
+    border-radius: 2rem 0 0 2rem;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #d0cbcbde;
+    padding-left: 3rem;
+}
+
+header form input[type="search"]:focus {
+    outline: none;
+}
+
+header form button {
+    min-width: fit-content;
+    width: 15%;
+    border-radius: 0 2rem  2rem 0;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #d0cbcbde;
+    border-left: none;
+    font-size: 1.4rem;
+}
+
+
+
+/*Main Style*/
+main {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    border: 1px solid pink;
+}
+
+main .related_nav {
+    width: 100%;
+    min-height: 5rem;
+    height: fit-content;
+    border: 1px solid darkgray;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    padding-left: 3rem;
+    padding: 1rem;
+    gap: 2rem;
+    
+    overflow-x: scroll;
+}
+
+.related_nav::-webkit-scrollbar {
+    height: 10px;
+}
+
+.related_nav::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, #3AAEF8, #9F62ED);
+    border-radius: 0.6rem;
+}
+
+.related {
+    border: 1px solid #fff;
+    padding: 0.3rem 2rem;
+    border-radius: 1.5rem;
+    min-width: fit-content;
+}
+
+.main-content {
+    width: 100%;
+    max-height: 100%;
+    border: 1px solid rgb(21, 255, 0);
+    padding: 0 10%;
+    padding-top: 2rem;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 4rem;
+}
+
+.homepage-main-content {
+    height:87%;
+    width: 100%;
+    border: 1px solid rgb(21, 255, 0);
+    padding: 0 10%;
+    padding-top: 2rem;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 4rem;
+}
+
+.homepage-main-content::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+}
+
+.main-content::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+}
+
+.main-content .preview-content {
+    width: 100%;
+    height: 53%;
+    border: 1px solid blueviolet;
+    margin-bottom: 3rem;
+}
+
+.main-content .trending-contents {
+    /* border: 1px solid white; */
+    width: 113%;
+    height: 44%;
+
+    display: flex;
+    gap: 3rem;
+    overflow-x: auto;
+    margin-bottom: 2rem;
+}
+
+
+.trending-contents::-webkit-scrollbar {
+    height: 10px;
+}
+
+.trending-contents::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, #3AAEF8, #9F62ED);
+    border-radius: 0.6rem;
+}
+
+
+
+
+.trending {
+    height: 100%;
+    width: 20%;
+    min-width: 28rem;
+    border: 1px solid gold;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+/*Homepage*/
+    .trending-label {
+        font-size: clamp(2rem, 2vw, 3rem);
+        color:rgb(248, 20, 20);
+        font-weight: bold;
+        margin: 1rem 0;
+        width: fit-content;
+    }
+
+    .trend {
+        /* border: 1px solid greenyellow; */
+        height: 45%;
+        width: 113%;
+        overflow-x: auto;
+        padding-bottom: 6px;
+
+        display: flex;
+        gap: 3rem;
+    }
+
+    .trend::-webkit-scrollbar {
+        height: 10px;
+    }
+    
+    .trend::-webkit-scrollbar-thumb {
+        background: linear-gradient(to right, #3AAEF8, #9F62ED);
+        border-radius: 0.6rem;
+    }
+    
+    .trend .trend-items {
+        border: 1px solid white;
+        height: 100%;
+        width: 30%;
+        min-width: 40rem;
+        flex-shrink: 0;
+    }
+
+    .recommended {
+        /* border: 1px solid wheat; */
+        min-height: 30%;
+        width: 100%;
+        margin-bottom: 3rem;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        row-gap: 4rem;
+        column-gap: 2rem;
+    }
+
+    .recommend-label {
+        font-size: clamp(1.7rem, 1vw, 2.5rem);
+        font-weight: bold;
+        margin: 1rem 0;
+        margin-top: 3rem;
+        width: fit-content;     
+    }
+
+    .recommendation {
+        border: 1px solid orangered;
+        height: 20rem;
+        /* width: 25%; */
+    }
+
+
+    /* Play video*/
+    .play-video-container {
+        border: 1px solid white;
+        max-width: 100%;
+        height: 99%;
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 20%;
+    }
+
+    .play-video-container figcaption {
+        border: 1px solid red;
+    }
+
+    .episodes {
+        border: 1px solid rgb(5, 96, 244);
+        margin-top: 5rem;
+        padding: 3rem 5%;
+        border-radius: 1.2rem;
+
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 3rem;
+        row-gap: 3rem;
+    }
+
+    .episodes h3 {
+        width: 100%;
+    }
+
+    .episode {
+        /* color: rgb(5, 96, 244); */
+        border: 2px solid white;
+        border-radius: 0.7rem;
+        padding: 0.5rem 1.5rem;
+        min-width: 2rem;
+        text-align: center;
+        font-weight: bold;
+    }
+
+
+@media (max-width: 600px) {
+   body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 13% 1fr 10%;
+        grid-template-areas:
+            "header"
+            "main"
+            "nav";
+   }
+   .homepage-main-content,
+   .main-content {
+        padding: 2rem;
+   }
+   
+}
