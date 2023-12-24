@@ -26,7 +26,6 @@ body {
 
     background-color: #212121;
     color: #fff;
-    border: 1px solid greenyellow;
     font-size: clamp(1.6rem, 2vw, 1.8rem);
 
     display: grid;
@@ -40,20 +39,24 @@ body {
 
 header {
     grid-area: header;
-    border: 1px solid #fff;
+    border-bottom: 1px solid #fff;
 
     display: flex;
 }
 
 nav {
-    border: 1px solid #fff;
+    border-right: 1px solid #fff;
     grid-area: nav;
+    padding-top: 3rem;
 
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    align-items: center;
 }
 
-main {
-    border: 1px solid #ff0101;
-    grid-area: main;
+nav img{
+    width: 4.2rem;
 }
 
 
@@ -64,7 +67,7 @@ header .logo {
     font-size: clamp(1.8rem, 3vw, 3.3rem);
     font-weight: bold;
     width: fit-content;
-    margin-left: 2rem;
+    margin-left: 2%;
     justify-content: center;
     align-self: center;
 
@@ -75,7 +78,7 @@ header .logo {
 }
 
 header form {
-    width: clamp(13rem, 38%, 50rem);
+    width: clamp(26rem, 38%, 50rem);
     height: 3.5rem;
 
     position: absolute;
@@ -116,17 +119,17 @@ header form button {
 
 /*Main Style*/
 main {
+    grid-area: main;
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
-    border: 1px solid pink;
 }
 
 main .related_nav {
     width: 100%;
     min-height: 5rem;
     height: fit-content;
-    border: 1px solid darkgray;
+    border-bottom: 1px solid #fff;
     box-sizing: border-box;
 
     display: flex;
@@ -157,9 +160,9 @@ main .related_nav {
 .main-content {
     width: 100%;
     max-height: 100%;
-    border: 1px solid rgb(21, 255, 0);
+    /* border: 1px solid rgb(21, 255, 0); */
     padding: 0 10%;
-    padding-top: 2rem;
+    padding-top: 4rem;
 
     overflow-y: auto;
     overflow-x: hidden;
@@ -169,8 +172,8 @@ main .related_nav {
 .homepage-main-content {
     height:87%;
     width: 100%;
-    border: 1px solid rgb(21, 255, 0);
-    padding: 0 10%;
+    /* border: 1px solid rgb(21, 255, 0); */
+    padding: 0 7%;
     padding-top: 2rem;
 
     overflow-y: auto;
@@ -206,7 +209,6 @@ main .related_nav {
     margin-bottom: 2rem;
 }
 
-
 .trending-contents::-webkit-scrollbar {
     height: 10px;
 }
@@ -215,9 +217,6 @@ main .related_nav {
     background: linear-gradient(to right, #3AAEF8, #9F62ED);
     border-radius: 0.6rem;
 }
-
-
-
 
 .trending {
     height: 100%;
@@ -239,13 +238,12 @@ main .related_nav {
 
     .trend {
         /* border: 1px solid greenyellow; */
-        height: 45%;
+        height: 55%;
         width: 113%;
         overflow-x: auto;
         padding-bottom: 6px;
 
         display: flex;
-        gap: 3rem;
     }
 
     .trend::-webkit-scrollbar {
@@ -258,11 +256,34 @@ main .related_nav {
     }
     
     .trend .trend-items {
-        border: 1px solid white;
-        height: 100%;
+        height: 90%;
         width: 30%;
         min-width: 40rem;
         flex-shrink: 0;
+        border: 1px solid white;
+        border-radius: 1rem;
+        margin: 1rem;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .trend .trend-items img {
+        width: 100%;
+        height:80%;
+        border: 1px solid #827f7f;
+        border-radius: 1rem 1rem 0 0;
+        box-sizing: border-box;
+    }
+
+    .trend-items figcaption {
+        width: 100%;
+        height: 20%;
+        padding: 1rem;
+    }
+    
+    .trend-items figcaption p{
+        margin: 0.7rem 0;
     }
 
     .recommended {
@@ -272,7 +293,7 @@ main .related_nav {
         margin-bottom: 3rem;
 
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
         row-gap: 4rem;
         column-gap: 2rem;
     }
@@ -286,17 +307,51 @@ main .related_nav {
     }
 
     .recommendation {
-        border: 1px solid orangered;
-        height: 20rem;
-        /* width: 25%; */
+        height: 25rem;
+        border: 1px solid #827f7f;
+        border-radius: 1rem;
+
+        display: flex;
+        flex-wrap: wrap;
     }
+
+    .recommendation img {
+        width: 100%;
+        height: 70%;
+        border-bottom: 1px solid #fff;
+        border-radius: 1rem 1rem 0 0;
+
+        /* object-fit:contain; */
+    }
+
+    .recommendation figcaption {
+        width: 100%;
+        height: 30%;
+        justify-self: flex-end;
+        padding: 1rem;
+        box-sizing: border-box;
+        margin: 0rem;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .recommendation figcaption b {
+        width: 100%;
+    }
+
+    .recommendation figcaption p {
+        width: 100%;
+        margin: 0.3rem 0;
+    }
+
 
 
     /* Play video*/
     .play-video-container {
         border: 1px solid white;
         max-width: 100%;
-        height: 99%;
+        height: 100%;
         margin: 0 auto;
 
         display: grid;
@@ -309,7 +364,7 @@ main .related_nav {
     }
 
     .episodes {
-        border: 1px solid rgb(5, 96, 244);
+        border: 3px solid rgb(5, 96, 244);
         margin-top: 5rem;
         padding: 3rem 5%;
         border-radius: 1.2rem;
@@ -334,19 +389,131 @@ main .related_nav {
         font-weight: bold;
     }
 
+    /* Collection */
+    .collection-container {
+        width: 100%;
+        min-height: 80%;
+        border: 3px solid rgb(5, 96, 244);
+        border-radius: 1.5rem;
+        padding: 2rem;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-evenly;
+        row-gap: 4rem;
+    }
+
+    #collection-label {
+        font-size: clamp(3rem, 2vw, 3.5rem);
+    }
+
+    .collection-item {
+        width: 18rem;
+        height: 27rem;
+        border: 1px solid greenyellow;
+        margin: 1 3rem;
+
+        display: flex;
+    }
+
+    .collection-item figcaption {
+        width: 100%;
+        height: 30%;
+        padding: 3%;
+        box-sizing: border-box;
+        border: 1px solid red;
+        position: relative;
+        align-self: flex-end;
+    }
+
+    .collection-item figcaption b{
+        font-size: 1.5rem;
+    }
+
+    .collection-item figcaption p,
+    .collection-item figcaption i {
+        margin: 1px;
+        font-size: 1.4rem;
+        color: rgba(205, 202, 202, 0.877);
+    }
+
+
+
+    /* Settings */
+    .settings-heading {
+        font-size: clamp(2rem, 3vw, 4rem);
+    }
+
+    .settings-content {
+        padding-left: 4%;
+    }
+
+    .settings-content b:nth-child(1) {
+        font-size: clamp(1.8rem, 2vw, 2.5rem);
+        font-weight: lighter;
+    }
+
+    .settings-content p {
+        margin: 0.3rem;
+    }
+
+    .settings-content ul {
+        padding-left: 0;
+    }
+
+    .settings-content li {
+        margin: 2.5rem 0rem;
+    }
+
 
 @media (max-width: 600px) {
    body {
         grid-template-columns: 1fr;
-        grid-template-rows: 13% 1fr 10%;
+        grid-template-rows: 13% 1fr 11%;
         grid-template-areas:
             "header"
             "main"
             "nav";
    }
+
+   nav {
+    border-top: 1px solid #fff;
+    flex-direction: row;
+    padding-top: 0rem;
+    justify-content: space-around;
+    align-items: center;
+
+   }
+
+   .trend {
+    height: 70%;
+    column-gap: 1rem;
+   }
+
+   .recommended {
+    width: 90%;
+    margin: auto;
+    row-gap: 0rem;
+   }
+
+   .recommendation {
+    height: 22rem;
+    }
+
    .homepage-main-content,
    .main-content {
-        padding: 2rem;
+        padding: 1rem;
    }
-   
+
+   .collection-container {
+        padding: 2%;
+   }
+
+   .collection-item {
+        /* width: 30rem;
+        height: 35rem; */
+        margin: 1rem;
+   }
+
+  
 }
