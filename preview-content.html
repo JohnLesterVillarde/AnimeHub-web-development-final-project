@@ -10,6 +10,10 @@
 </head>
 <body>
 
+    <div class="notify">
+        <p>added succesfully</p>
+    </div>
+
     <header>
         <p class="logo" >AnimeHub</p>
         <form action="">
@@ -28,15 +32,18 @@
 
         <div class="main-content">
             <figure class="preview-content">
-                <img src="img/onepieceZfilm.png">
+                <img src="img/onepieceZfilm.png" id="image">
                 <figcaption>
-                    <b>ONE PIECE</b>
+                    <b id="title">ONE PIECE</b>
                     <P>Action, Adventure, Comedy, Drama, Fantasy</P>
                     <p>Type: TV, Release date: 1999, Status: Ongoing</p>
                     <a href="play_video.html">
-                        <div class="play-now">
-                            <img src="img/play1.png">
-                            <p>Play Now</A>
+                        <div class="buttons">
+                            <div class="play-now">
+                                <img src="img/play.png">
+                                <p>Play Now</A>
+                            </div>
+                            <button>ADD TO LIBRARY</button>
                         </div>
                     </a>    
                 </figcaption>
@@ -53,7 +60,7 @@
                 <figure class="trending">
                     <img src="img/demon-slayer-season-2-entertainment-district-arc-premiere-re_ayn1.1280.webp">
                     <figcaption>
-                        <b>Demon Slayer | Entertainment District</b>
+                        <b>Demon Slayer | Season 2</b>
                     </figcaption>
                 </figure>
 
@@ -88,7 +95,7 @@
                 <figure class="trending">
                     <img src="img/chainsawman.webp">
                     <figcaption>
-                        <b>Chainsawman</b>
+                        <b>Chainsaw man</b>
                     </figcaption>
                 </figure>
 
@@ -111,6 +118,7 @@
         </div>
         
     </main>
-    
+
+    <script src="javascripts/preview-content.js"></script>
 </body>
 </html>
