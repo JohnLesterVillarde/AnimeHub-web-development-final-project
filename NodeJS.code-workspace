@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../NodeJS"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../../php_folder"
+		}
+	],
+	"settings": {}
+}

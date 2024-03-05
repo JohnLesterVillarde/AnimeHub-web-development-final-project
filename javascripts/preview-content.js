@@ -79,10 +79,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // if (collectionList != null) {
     //   console.log("Array is not null ");
-    //   //console.log(collectionList);
+    //   console.log(collectionList);
 
     //   addToLibraryList = [...collectionList];
     // }
+    
     let objectImage = preview.querySelector("img").src;
     let objectTitle = preview.querySelector("b").textContent;
     let addObject = { image: objectImage, title: objectTitle }; //object
@@ -99,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       console.log("library " + objectTitle);
       localStorage.setItem("library", JSON.stringify(addToLibraryList));
-      location.reload();
+      //location.reload();
     }
     
   });
